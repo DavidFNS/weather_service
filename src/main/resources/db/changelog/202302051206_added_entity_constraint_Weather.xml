@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="202302051206_added_entity_constraint_Weather" author="Davud">
+        <addForeignKeyConstraint baseColumnNames="city_id"
+                                 baseTableName="weathers"
+                                 constraintName="fk_weather__city_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cities"/>
+    </changeSet>
+</databaseChangeLog>

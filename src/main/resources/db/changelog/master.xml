@@ -1,0 +1,23 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
+    <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
+
+    <include file="db/changelog/202302051126_added_entity_Authority.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051058_added_entity_Users.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051128_added_entity_Role.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051108_added_entity_City.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051058_added_entity_Weather.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051130_added_entity_Subscription.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051201_added_entity_constraint_Subscription.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/202302051206_added_entity_constraint_Weather.xml" relativeToChangelogFile="false"/>
+</databaseChangeLog>
